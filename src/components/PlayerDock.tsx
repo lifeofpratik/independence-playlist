@@ -1,5 +1,5 @@
 import React, { useRef, useState, useCallback } from 'react';
-import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX, Volume1 } from 'lucide-react';
+import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX, Volume1, Mic2 } from 'lucide-react';
 import { Track, MoodFilter } from '../types';
 
 interface PlayerDockProps {
@@ -17,6 +17,8 @@ interface PlayerDockProps {
   currentTime: number;
   duration: number;
   onSeekTo: (fraction: number) => void;
+  isDynamicLyricsEnabled?: boolean;
+  onToggleDynamicLyrics?: () => void;
 }
 
 const formatTime = (seconds: number): string => {
@@ -41,6 +43,8 @@ export const PlayerDock: React.FC<PlayerDockProps> = ({
   currentTime,
   duration,
   onSeekTo,
+  isDynamicLyricsEnabled = true,
+  onToggleDynamicLyrics,
 }) => {
   const seekRef = useRef<HTMLDivElement | null>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -115,22 +119,40 @@ export const PlayerDock: React.FC<PlayerDockProps> = ({
             </div>
           </div>
 
-          {/* Mood Selector Tabs */}
-          <div className="flex items-center gap-1 bg-white/10 backdrop-blur-md p-1 rounded-full border border-white/15 shadow-inner my-1 md:my-0">
-            {moodOptions.map((m) => (
+          {/* Mood Selector Tabs & Lyrics Toggle */}
+          <div className="flex items-center gap-3 my-1 md:my-0">
+            <div className="flex items-center gap-1 bg-white/10 backdrop-blur-md p-1 rounded-full border border-white/15 shadow-inner">
+              {moodOptions.map((m) => (
+                <button
+                  key={m.id}
+                  type="button"
+                  onClick={() => onSelectMood(m.id)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
+                    currentMood === m.id
+                      ? 'bg-white text-gray-900 shadow-md font-bold'
+                      : 'text-white/70 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  {m.label}
+                </button>
+              ))}
+            </div>
+
+            {onToggleDynamicLyrics && (
               <button
-                key={m.id}
                 type="button"
-                onClick={() => onSelectMood(m.id)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
-                  currentMood === m.id
-                    ? 'bg-white text-gray-900 shadow-md font-bold'
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                onClick={onToggleDynamicLyrics}
+                className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 border border-white/15 ${
+                  isDynamicLyricsEnabled
+                    ? 'bg-amber-500/90 text-gray-950 shadow-md font-bold'
+                    : 'bg-white/10 text-white/70 hover:text-white hover:bg-white/20'
                 }`}
+                title={isDynamicLyricsEnabled ? 'Disable Dynamic Lyrics' : 'Enable Dynamic Lyrics'}
               >
-                {m.label}
+                <Mic2 className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Lyrics</span>
               </button>
-            ))}
+            )}
           </div>
 
           {/* Audio Controls */}

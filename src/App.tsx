@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { TRACKS } from './data/playlist';
 import { MoodFilter, Track } from './types';
 import { useYouTubePlayer } from './hooks/useYouTubePlayer';
+import { useDynamicLyrics } from './hooks/useDynamicLyrics';
 import { HeaderOverlay } from './components/HeaderOverlay';
 import { BackgroundHero } from './components/BackgroundHero';
 import { WordOverlay } from './components/WordOverlay';
@@ -14,6 +15,7 @@ export default function App() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [isInfoOpen, setIsInfoOpen] = useState<boolean>(false);
+  const [isDynamicLyrics, setIsDynamicLyrics] = useState<boolean>(true);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const [progress, setProgress] = useState<{ current: number; duration: number }>({
@@ -63,6 +65,8 @@ export default function App() {
     onEnded: handleNextTrack,
     onError: handleNextTrack,
   });
+
+  const { lyrics, loading: lyricsLoading } = useDynamicLyrics(currentTrack.artist, currentTrack.title, currentTrack.fullLyrics);
 
   // Periodically poll player progress time
   useEffect(() => {
@@ -178,18 +182,26 @@ export default function App() {
     <main className="relative min-h-screen min-h-dvh flex flex-col justify-between overflow-hidden select-none">
       
       {/* Background Hero Artwork */}
-      <BackgroundHero imageSrc={currentTrack.image} />
+      <BackgroundHero imageSrc={`https://img.youtube.com/vi/${currentTrack.youtubeId}/maxresdefault.jpg`} fallbackSrc={currentTrack.image} />
 
       {/* Massive Motion Hindi Word Overlay */}
       <WordOverlay
         word={currentTrack.word}
+        lyricsSnippet={currentTrack.lyricsSnippet}
+        lyricsList={lyrics}
+        progressFraction={progress.duration > 0 ? progress.current / progress.duration : 0}
+        isDynamicLyricsEnabled={isDynamicLyrics}
         position={currentTrack.wordPos || 'top-left'}
         wordSize={currentTrack.wordSize || 1}
       />
 
-      {/* Hidden YouTube IFrame Audio Host */}
-      <div className="absolute opacity-0 pointer-events-none w-1 h-1 overflow-hidden">
-        <div ref={player.hostRef} />
+      {/* YouTube IFrame Video Background */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#0d2242]">
+        <div className="absolute top-1/2 left-1/2 w-[300vw] h-[300vh] -translate-x-1/2 -translate-y-1/2 sm:w-[150vw] sm:h-[150vh] md:w-[120vw] md:h-[120vh]">
+          <div ref={player.hostRef} className="w-full h-full opacity-60 mix-blend-screen" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
       </div>
 
       {/* Header Overlay Controls */}
@@ -218,6 +230,8 @@ export default function App() {
         currentTime={progress.current}
         duration={progress.duration}
         onSeekTo={player.seekToFraction}
+        isDynamicLyricsEnabled={isDynamicLyrics}
+        onToggleDynamicLyrics={() => setIsDynamicLyrics((prev) => !prev)}
       />
 
       {/* Playlist Track Drawer Modal */}

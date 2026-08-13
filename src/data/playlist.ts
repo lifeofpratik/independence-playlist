@@ -14,6 +14,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '4:01',
     isGenZ: true,
+    fullLyrics: ["ऐ वतन, वतन मेरे, आबाद रहे तू","मैं जहाँ रहूँ, जहाँ में याद रहे तू","ऐ वतन, मेरे वतन","तू ही मेरी मंज़िल है, पहचान तुझी से","पहुँचूँ मैं जहाँ भी, मेरी बुनियाद रहे तू"],
     lyricsSnippet: 'ऐ वतन, वतन मेरे, आबाद रहे तू... मैं जहाँ रहूँ, जहाँ में याद रहे तू!',
     description: 'A modern masterpiece from Raazi celebrating unconditional love and duty towards the nation.'
   },
@@ -30,6 +31,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '4:22',
     isGenZ: true,
+    fullLyrics: ["ये तिरंगा मेरी शान है","ये तिरंगा मेरी जान है","हर धड़कन में बसा है जो","वो भारत का अभिमान है","ऊँचा रहे ये सदा","गगन में लहराता हुआ"],
     lyricsSnippet: 'ये तिरंगा मेरी शान है, ये तिरंगा मेरी जान है...',
     description: 'An uplifting anthem honoring the Indian tricolor standard flying high.'
   },
@@ -46,6 +48,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '7:19',
     isGenZ: false,
+    fullLyrics: ["मेरे देश की धरती सोना उगले","उगले हीरे मोती","मेरे देश की धरती","बैलों के गले में जब घुंघरू","जीवन का राग सुनाते हैं"],
     lyricsSnippet: 'मेरे देश की धरती सोना उगले, उगले हीरे मोती... मेरे देश की धरती!',
     description: 'The golden classic celebrating India’s hardworking farmers and fertile soil.'
   },
@@ -62,6 +65,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '6:36',
     isGenZ: true,
+    fullLyrics: ["संदेशे आते हैं","हमें तड़पाते हैं","कि चिट्ठी आती है","कि पूछे जाती है","के घर कब आओगे","लिखो कब आओगे","के तुम बिन ये घर सूना सूना है"],
     lyricsSnippet: 'संदेशे आते हैं, हमें तड़पाते हैं... कि चिट्ठी आती है, कि पूछे जाती है...',
     description: 'The timeless song of soldier longing, love, and sacrifice on the border post.'
   },
@@ -78,6 +82,7 @@ export const TRACKS: Track[] = [
     wordPos: 'center-right',
     dur: '4:00',
     isGenZ: true,
+    fullLyrics: ["हम मिट्टी के बेटे हैं","माटी का मोल चुकाएंगे","इस देश की खातिर जीते हैं","इस देश की खातिर जाएंगे"],
     lyricsSnippet: 'हम मिट्टी के बेटे हैं, माटी का मोल चुकाएंगे...',
     description: 'A powerful tribute to the defenders standing guard in rugged terrains.'
   },
@@ -94,6 +99,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '7:22',
     isGenZ: false,
+    fullLyrics: ["ऐ मेरे वतन के लोगों","ज़रा आँख में भर लो पानी","जो शहीद हुए हैं उनकी","ज़रा याद करो कुर्बानी","जब घायल हुआ हिमालय","खतरे में पड़ी आज़ादी"],
     lyricsSnippet: 'ऐ मेरे वतन के लोगों, ज़रा आँख में भर लो पानी... जो शहीद हुए हैं उनकी ज़रा याद करो कुर्बानी!',
     description: 'Lata Mangeshkar’s immortal ballad that moved Pandit Jawaharlal Nehru to tears.'
   },
@@ -110,6 +116,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-center',
     dur: '4:47',
     isGenZ: true,
+    fullLyrics: ["कुछ कर गुज़रने को ख़ून ख़ौलता है","कुछ कर गुज़रने को","चक दे, हो चक दे इंडिया!","चक दे, हो चक दे इंडिया!"],
     lyricsSnippet: 'कुछ कर गुज़रने को ख़ून ख़ौलता है... चक दे, हो चक दे इंडिया!',
     description: 'The ultimate sports & national grit song that fuels every victory.'
   },
@@ -126,6 +133,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-center',
     dur: '6:25',
     isGenZ: true,
+    fullLyrics: ["ये जो देस है तेरा","स्वदेस है तेरा","है तुझे पुकारा रे","यहाँ वहाँ सारे","बिखरे हैं उजले सपने","अपने तो आखिर अपने"],
     lyricsSnippet: 'ये जो देस है तेरा, स्वदेस है तेरा... है तुझे पुकारा रे!',
     description: 'A soul-stirring melody by A.R. Rahman calling back every heart to its roots.'
   },
@@ -142,6 +150,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '2:39',
     isGenZ: true,
+    fullLyrics: ["ओ ज़िंदा है तो प्यास बहा दे","भाग मिल्खा भाग","भाग मिल्खा भाग","आग है अंदर आग लगा दे"],
     lyricsSnippet: 'ओ ज़िंदा है तो प्यास बहा दे... भाग मिल्खा भाग!',
     description: 'High-octane motivation inspired by the legendary Flying Sikh.'
   },
@@ -158,6 +167,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '2:58',
     isGenZ: false,
+    fullLyrics: ["ये दुनिया एक दुल्हन","दुल्हन के माथे की बिंदी","ये मेरा इंडिया","आई लव माय इंडिया"],
     lyricsSnippet: 'ये दुनिया एक दुल्हन, दुल्हन के माथे की बिंदी... आई लव माय इंडिया!',
     description: 'Nostalgic 90s celebration of Indian warmth, culture, and hospitality.'
   },
@@ -174,6 +184,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '5:39',
     isGenZ: false,
+    fullLyrics: ["है प्रीत जहाँ की रीत सदा","मैं गीत वहाँ के गाता हूँ","भारत का रहने वाला हूँ","भारत की बात सुनाता हूँ"],
     lyricsSnippet: 'है प्रीत जहाँ की रीत सदा, मैं गीत वहाँ के गाता हूँ... भारत का रहने वाला हूँ, भारत की बात सुनाता हूँ!',
     description: 'Manoj Kumar’s iconic pride song detailing India’s contributions to science, zero, and peace.'
   },
@@ -190,6 +201,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '5:42',
     isGenZ: true,
+    fullLyrics: ["डिंग डिंग গোলা","मोहे रंग दे बसंती यारा","रंग दे बसंती","मेरा रंग दे बसंती","रंग दे बसंती यारा"],
     lyricsSnippet: 'डिंग डिंग डिंग... मोहे रंग दे बसंती यारा!',
     description: 'Electrifying fusion of Punjabi dhol and youth awakening.'
   },
@@ -206,6 +218,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-center',
     dur: '3:08',
     isGenZ: false,
+    fullLyrics: ["भारत हमको जान से प्यारा है","सबसे न्यारा गुलसितां हमारा है","सदियों से भारत भूमि दुनिया की शान है","भारत माँ की रक्षा में जीवन कुर्बान है"],
     lyricsSnippet: 'भारत हमको जान से प्यारा है, सबसे न्यारा गुलसितां हमारा है...',
     description: 'Hariharan’s velvety vocal rendition of A.R. Rahman’s patriotic classic.'
   },
@@ -222,6 +235,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '5:18',
     isGenZ: true,
+    fullLyrics: ["रंगीला रंगीला देस मेरा रंगीला","रंगीला रंगीला देस मेरा रंगीला","सिंदूरी गालों वाला","रंगीला रंगीला"],
     lyricsSnippet: 'रंगीला रंगीला देस मेरा रंगीला...',
     description: 'Vibrant celebratory dance track staple across schools and colleges.'
   },
@@ -238,6 +252,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '4:44',
     isGenZ: false,
+    fullLyrics: ["वंदे मातरम, वंदे मातरम","माँ तुझे सलाम","माँ तुझे सलाम","यहाँ वहाँ सारा जहाँ देख लिया","तेरे सिवा कोई नहीं"],
     lyricsSnippet: 'वंदे मातरम, वंदे मातरम... माँ तुझे सलाम!',
     description: 'A.R. Rahman’s iconic 50th Independence Day album title track that reshaped patriotic music.'
   },
@@ -254,6 +269,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '9:43',
     isGenZ: false,
+    fullLyrics: ["ऐ वतन ऐ वतन हमको तेरी क़सम","तेरी राहों में जाँ तक लुटा जाएँगे","जलवे तेरे सदा जगमगाते रहें","हम तो अपनी जान देके बचा जाएँगे"],
     lyricsSnippet: 'ऐ वतन ऐ वतन हमको तेरी क़सम, तेरी राहों में जाँ तक लुटा जाएँगे!',
     description: 'Classic tribute to Shaheed Bhagat Singh, Sukhdev, and Rajguru.'
   },
@@ -270,6 +286,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '2:06',
     isGenZ: false,
+    fullLyrics: ["सुनो गौर से दुनिया वालों","बुरी नज़र ना हम पे डालो","चाहे जितना ज़ोर लगा लो","सबसे आगे होंगे","हिंदुस्तानी!"],
     lyricsSnippet: 'सुनो गौर से दुनिया वालों, बुरी नज़र ना हम पे डालो... सब से आगे होंगे हिंदुस्तानी!',
     description: 'High-energy 90s pop patriotic banger that played on repeat every August 15th.'
   },
@@ -286,6 +303,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '5:27',
     isGenZ: true,
+    fullLyrics: ["कांधों से मिलते हैं कांधे","कदमों से कदम मिलते हैं","हम चलते हैं जब ऐसे तो","दिल दुश्मन के हिलते हैं","अब तो है आज़ादी","अब तो है आज़ादी"],
     lyricsSnippet: 'कांधों से मिलते हैं कांधे, कदमों से कदम मिलते हैं... हम चलते हैं जब ऐसे तो दिल दुश्मन के हिलते हैं!',
     description: 'Troop marching camaraderie track from Lakshya.'
   },
@@ -302,6 +320,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '2:53',
     isGenZ: false,
+    fullLyrics: ["मेरा रंग दे बसंती चोला","ओ माय रंग दे बसंती चोला","इसी रंग में रंग के शिवा ने","माँ का बंधन खोला","मेरा रंग दे बसंती चोला"],
     lyricsSnippet: 'मेरा रंग दे बसंती चोला, ओ माय रंग दे बसंती चोला!',
     description: 'The freedom movement anthem associated with Bhagat Singh.'
   },
@@ -318,6 +337,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-center',
     dur: '4:13',
     isGenZ: false,
+    fullLyrics: ["सारे जहाँ से अच्छा","हिन्दोस्ताँ हमारा","हम बुलबुलें हैं इसकी","ये गुलसिताँ हमारा","सारे जहाँ से अच्छा"],
     lyricsSnippet: 'सारे जहाँ से अच्छा हिन्दोस्ताँ हमारा... हम बुलबुलें हैं इसकी ये गुलसिताँ हमारा!',
     description: 'The national patriotic poem composed by Allama Iqbal in 1904.'
   },
@@ -334,6 +354,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '7:05',
     isGenZ: true,
+    fullLyrics: ["धरती सुनहरी अंबर नीला","हर मौसम रंगीला","ऐसा देस है मेरा","हाँ ऐसा देस है मेरा"],
     lyricsSnippet: 'धरती सुनहरी अंबर नीला... ऐसा देस है मेरा!',
     description: 'Madan Mohan’s soulful composition bringing mustard fields and cultural beauty alive.'
   },
@@ -350,6 +371,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-center',
     dur: '5:31',
     isGenZ: true,
+    fullLyrics: ["जय हो! जय हो!","आजा आजा जींद शामियाने के तले","आजा ज़रीवाले नीले आसमान के तले","जय हो! जय हो!"],
     lyricsSnippet: 'जय हो! जय हो! आजा आजा जींद शामियाने के तले...',
     description: 'The Oscar & Grammy-winning international anthem of victory.'
   },
@@ -366,6 +388,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '3:16',
     isGenZ: false,
+    fullLyrics: ["सुजलां सुफलां मलयजशीतलाम्","शस्यश्यामलां मातरम्","वंदे मातरम्!","शुभ्रज्योत्स्नापुलकितयामिनीम्","फुल्लकुसुमितद्रुमदलशोभिनीम्"],
     lyricsSnippet: 'सुजलां सुफलां मलयजशीतलाम् शस्यश्यामलां मातरम्... वंदे मातरम्!',
     description: 'The classic national song rendition written by Bankim Chandra Chattopadhyay.'
   },
@@ -382,6 +405,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '6:03',
     isGenZ: false,
+    fullLyrics: ["कर चले हम फिदा जान-ओ-तन साथियों","अब तुम्हारे हवाले वतन साथियों","साँस थमती गई नब्ज़ जमती गई","फिर भी बढ़ते कदम को न रुकने दिया"],
     lyricsSnippet: 'कर चले हम फिदा जान-ओ-तन साथियों... अब तुम्हारे हवाले वतन साथियों!',
     description: 'Madan Mohan & Kaifi Azmi’s heartbreaking homage to soldiers defending the motherland.'
   },
@@ -398,6 +422,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '3:53',
     isGenZ: true,
+    fullLyrics: ["लेहरा दो, लेहरा दो","सरकशी का परचम लेहरा दो","अकड़े हुए जो खड़े हैं","उनकी जड़ें हिला दो","लेहरा दो"],
     lyricsSnippet: 'लेहरा दो, लेहरा दो... सरकशी का परचम लेहरा दो!',
     description: 'Pritam & Arijit Singh’s stirring anthem from the 1983 World Cup saga.'
   },
@@ -414,6 +439,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '3:35',
     isGenZ: true,
+    fullLyrics: ["छल्ला तू सब दा","छल्ला तू सब दा","मैं लड़ जाना","हाँ मैं लड़ जाना","खून खौलने दे","अब तो लड़ जाना"],
     lyricsSnippet: 'छल्ला तू सब दा, छल्ला तू सब दा... मैं लड़ जाना!',
     description: 'High voltage battlecry from Uri: The Surgical Strike.'
   },
@@ -430,6 +456,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-left',
     dur: '5:26',
     isGenZ: true,
+    fullLyrics: ["तेरी मिट्टी में मिल जावाँ","गुल बनके मैं खिल जावाँ","इतनी सी है दिल की आरज़ू","तेरी नदियों में बह जावाँ","तेरे खेतों में लहरावाँ","इतनी सी है दिल की आरज़ू"],
     lyricsSnippet: 'तेरी मिट्टी में मिल जावाँ, गुल बनके मैं खिल जावाँ... इतनी सी है दिल की आरज़ू!',
     description: 'Manoj Muntashir & B Praak’s emotionally transcendent hit honoring Battle of Saragarhi.'
   },
@@ -446,6 +473,7 @@ export const TRACKS: Track[] = [
     wordPos: 'top-right',
     dur: '6:00',
     isGenZ: false,
+    fullLyrics: ["दिल दिया है","जाँ भी देंगे","ऐ वतन तेरे लिए","दिल दिया है जाँ भी देंगे","ऐ वतन तेरे लिए","हर करम अपना करेंगे","ऐ वतन तेरे लिए"],
     lyricsSnippet: 'दिल दिया है, जाँ भी देंगे... ऐ वतन तेरे लिए!',
     description: 'The monumental 80s pledge song by Laxmikant-Pyarelal.'
   }

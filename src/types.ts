@@ -27,6 +27,7 @@ export interface Track {
   focus?: string;
   dur: string;
   isGenZ: boolean;
+  fullLyrics?: string[];
   lyricsSnippet?: string;
   description?: string;
 }

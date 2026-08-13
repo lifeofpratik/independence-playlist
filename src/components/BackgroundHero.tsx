@@ -2,18 +2,21 @@ import React, { useState, useEffect } from 'react';
 
 interface BackgroundHeroProps {
   imageSrc: string;
+  fallbackSrc?: string;
 }
 
-export const BackgroundHero: React.FC<BackgroundHeroProps> = ({ imageSrc }) => {
+export const BackgroundHero: React.FC<BackgroundHeroProps> = ({ imageSrc, fallbackSrc }) => {
   const [currentSrc, setCurrentSrc] = useState(imageSrc);
   const [prevSrc, setPrevSrc] = useState<string | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     if (imageSrc !== currentSrc) {
       setPrevSrc(currentSrc);
       setCurrentSrc(imageSrc);
       setIsAnimating(true);
+      setHasError(false);
 
       const timer = setTimeout(() => {
         setPrevSrc(null);
@@ -23,6 +26,13 @@ export const BackgroundHero: React.FC<BackgroundHeroProps> = ({ imageSrc }) => {
       return () => clearTimeout(timer);
     }
   }, [imageSrc, currentSrc]);
+
+  const handleError = () => {
+    if (!hasError && fallbackSrc) {
+      setHasError(true);
+      setCurrentSrc(fallbackSrc);
+    }
+  };
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden bg-[#0d2242]">
@@ -40,6 +50,7 @@ export const BackgroundHero: React.FC<BackgroundHeroProps> = ({ imageSrc }) => {
         key={currentSrc}
         src={currentSrc}
         alt=""
+        onError={handleError}
         className={`absolute inset-0 w-full h-full object-cover object-center pointer-events-none transition-all duration-1000 ${
           isAnimating ? 'shot-in opacity-100' : 'opacity-100 scale-100'
         }`}
