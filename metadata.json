@@ -1,0 +1,6 @@
+{
+  "name": "Azaad Bharat",
+  "description": "Desi patriotic bangers music player with curated Gen Z and UnGen Z Independence Day playlists, custom Hindi typography overlays, and interactive audio controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-hindi: 'Yatra One', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --edge: clamp(14px, 1.8vw, 26px);
+    --top: clamp(14px, 2vh, 20px);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #12325e;
+    color: #ffffff;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.brand-hindi {
+  font-family: 'Yatra One', var(--font-hindi), serif;
+}
+
+/* Custom Volume Slider */
+.vol-range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 88px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #ffffff var(--fill, 70%), rgba(255, 255, 255, 0.25) var(--fill, 70%));
+  cursor: pointer;
+}
+
+.vol-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease;
+}
+
+.vol-range::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.vol-range::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Indian Tricolor Seek Bar Gradient */
+.tricolor-seek-fill {
+  background-image: linear-gradient(90deg, #ff9933 0 33.33%, #ffffff 33.33% 66.66%, #138808 66.66% 100%);
+  background-size: 100vw 100%;
+  background-repeat: no-repeat;
+}
+
+/* Image shot animations */
+@keyframes shot-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.shot-in {
+  animation: shot-in 0.9s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Custom Scrollbar for Drawer */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
